@@ -8,7 +8,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+  <style>
+    /* WHO IT'S FOR */
+    .who-section{background:#0d0d0d;padding:7rem 2rem}
+    .who-inner{max-width:1260px;margin:0 auto}
+    .who-header{margin-bottom:3.5rem}
+    .who-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .who-card{background:#111;border:1px solid rgba(255,255,255,0.07);border-radius:3px;padding:2.25rem 2rem 2rem;display:flex;flex-direction:column;gap:1.1rem;transition:border-color .3s,transform .3s}
+    .who-card:hover{border-color:rgba(26,107,255,0.4);transform:translateY(-3px)}
+    .who-card--mid{border-color:#1A6BFF;background:rgba(26,107,255,0.04)}
+    .who-card-top{display:flex;align-items:center;gap:1rem}
+    .who-num{font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:700;color:rgba(26,107,255,0.25);line-height:1;flex-shrink:0}
+    .who-label{font-size:0.62rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1A6BFF}
+    .who-card h3{font-family:'Oswald',sans-serif;font-size:1.6rem;font-weight:700;text-transform:uppercase;color:#fff;line-height:1.15;border-top:1px solid rgba(255,255,255,0.07);padding-top:1.1rem;margin:0}
+    .who-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;flex:1}
+    .who-list li{font-size:0.83rem;color:rgba(255,255,255,0.6);padding:0.55rem 0 0.55rem 1rem;border-bottom:1px solid rgba(255,255,255,0.07);position:relative;line-height:1.5}
+    .who-list li:last-child{border-bottom:none}
+    .who-list li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:4px;background:#1A6BFF;border-radius:50%}
+    .who-sports{display:flex;flex-wrap:wrap;gap:0.4rem;padding-top:0.5rem}
+    .who-sports span{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.07);padding:0.28rem 0.65rem;border-radius:100px}
+    /* ONE-OFF ROW (now uses p-card style — no extra CSS needed) */
+    .programs-label{max-width:1260px;margin:0 auto 1.25rem;display:flex;align-items:center;gap:0.75rem}
+    .programs-label span{font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#fff}
+    .programs-label em{font-style:normal;font-size:0.8rem;color:#a0a0b0}
+    .programs-label--mt{margin-top:4rem}
+    @media(max-width:900px){.who-cards{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 
