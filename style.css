@@ -1140,7 +1140,6 @@ ul  { list-style: none; }
 .who-section {
   background: var(--black);
   padding: 7rem 2rem;
-  position: relative;
 }
 
 .who-inner {
@@ -1149,84 +1148,120 @@ ul  { list-style: none; }
 }
 
 .who-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 4rem;
-}
-
-.who-intro {
-  font-size: 1rem;
-  color: var(--off);
-  line-height: 1.7;
-  margin-top: 1rem;
+  margin-bottom: 3.5rem;
 }
 
 .who-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .who-card {
   background: var(--black2);
   border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2.5rem 2rem;
-  position: relative;
-  transition: border-color 0.3s;
+  border-radius: 3px;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: border-color 0.3s, transform 0.3s;
 }
 
 .who-card:hover {
   border-color: rgba(26,107,255,0.4);
+  transform: translateY(-3px);
 }
 
 .who-card--mid {
   border-color: var(--blue);
-  background: rgba(26,107,255,0.05);
+  background: rgba(26,107,255,0.04);
 }
 
-.who-card-num {
+.who-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.who-num {
   font-family: var(--font-disp);
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: rgba(26,107,255,0.12);
+  color: rgba(26,107,255,0.25);
   line-height: 1;
-  margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.who-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
 }
 
 .who-card h3 {
   font-family: var(--font-disp);
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.15;
+  border-top: 1px solid var(--border);
+  padding-top: 1.1rem;
 }
 
-.who-card p {
-  font-size: 0.875rem;
+.who-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.who-list li {
+  font-size: 0.83rem;
   color: rgba(255,255,255,0.6);
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
+  padding: 0.55rem 0;
+  padding-left: 1rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  line-height: 1.5;
+}
+
+.who-list li:last-child { border-bottom: none; }
+
+.who-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 50%;
 }
 
 .who-sports {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 .who-sports span {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--blue);
-  border: 1px solid rgba(26,107,255,0.35);
-  padding: 0.3rem 0.7rem;
+  color: rgba(255,255,255,0.45);
+  border: 1px solid var(--border);
+  padding: 0.28rem 0.65rem;
   border-radius: 100px;
 }
 
